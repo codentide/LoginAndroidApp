@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+  <ImageView
+      android:id="@+id/imageView2"
+      android:layout_width="match_parent"
+      android:layout_height="180dp"
+      android:background="#673AB7"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.523"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_launcher_foreground" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:padding="24dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView2"
+      app:layout_constraintVertical_bias="0.0">
+
+    <Button
+        android:id="@+id/btn_updateBack"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:onClick="toMain"
+        android:text="Back"
+        app:backgroundTint="?android:attr/colorEdgeEffect"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="NewApi" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardBackgroundColor="?android:attr/colorEdgeEffect"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,NewApi">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Update password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="?attr/colorSecondaryContainer"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+            app:cardCornerRadius="8dp"
+            app:contentPaddingLeft="6dp"
+            app:contentPaddingRight="6dp">
+
+          <EditText
+              android:id="@+id/et_updatePass"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"
+              android:hint="New password"
+              android:inputType="textPassword" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_updatePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="updatePassword"
+            android:text="Update "
+            android:textColor="?attr/colorOnPrimaryContainer"
+            android:textStyle="bold"
+            app:backgroundTint="?android:attr/textColorLinkInverse"
+            app:cornerRadius="8dp"
+            app:iconPadding="-10dp"
+            app:iconTint="?attr/colorOnPrimaryContainer" />
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
